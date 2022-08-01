@@ -31,6 +31,11 @@ public class FloatAndDoubles {
         double divisionExpected = 5 / 2.0;
         System.out.println(divisionExpected); // => 2.5 | Expected result!
 
+        //CAUTION!! When using double, some accounts may return unexpected results, for example...
+        double sumWeird = 0.1 + 0.2; //We wait for result => 0.3, but...
+        System.out.println(sumWeird); // => 0.30000000000000004 | What? This is because binary operations
+                                      //in Java (and other languages) do not handle operations very well 
+                                      //with floating point numbers...
     }
 
 }
