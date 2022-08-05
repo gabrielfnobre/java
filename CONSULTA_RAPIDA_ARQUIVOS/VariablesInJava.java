@@ -16,7 +16,6 @@ public class VariablesInJava {
 
         first = 10; //even if another value is assigned in the variable "first"...
         System.out.println(second); // => 5 | the value in "second" is not changed...
-
     }
 
 }
