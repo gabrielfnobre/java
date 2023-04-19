@@ -8,8 +8,8 @@
     nós e para os outros.
     Veja um exemplo abaixo...
 
-    OBSERVAÇÃO: É claro que algumas coisas não podem ser separadas em várias linhas, por exemplo as strings dentro 
-    de um método println não podem ser separadas em várias linhas.
+    OBSERVAÇÃO: É claro que algumas coisas não podem ser separadas em várias linhas, como palavras reservadas ou 
+    strings dentro de um método println não podem ser separadas em várias linhas.
  */
 
 public class Sentences {
