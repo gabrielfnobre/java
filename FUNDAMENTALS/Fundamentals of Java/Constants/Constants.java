@@ -13,6 +13,10 @@
                 declarado obrigatóriamente após a declaração da palavra 
                 reservada "final" e antes da inicialização da variável;
 
+        * CONVENÇÃO DAS LETRAS MAIÚSCULAS: No Java é uma convenção muito 
+                importante usar letras maiúsculas no nome de uma constante
+                Java. Todas as letras em maiúsculo;
+
     Veja o exemplo abaixo...
  
  */
@@ -25,9 +29,10 @@ public class Constants {
 
         //Aqui, não é uma variável, e sim uma constante, constantes no Java
         //recebem o "final" indicando que esse valor é o final e não poderá
-        //ser trocado.
-        final double pi = 3.14159;
-        double area = pi * raio * raio;
+        //ser trocado. Além disso, note que por convenção, ela está em 
+        //letras maiúsculas;
+        final double PI = 3.14159;
+        double area = PI * raio * raio;
 
         //Note que o valor do primeiro resultado funciona conforme o 
         //planejado.
@@ -42,7 +47,7 @@ public class Constants {
 
         //Porém se fizermos agora a mesma conta da circunferência após a
         //troca do valor do raio, o valor da circunferência mudará.
-        area = pi * raio * raio;
+        area = PI * raio * raio;
         System.out.println("Terceiro resultado: " + area);
 
     }

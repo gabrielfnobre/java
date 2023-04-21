@@ -28,9 +28,10 @@ public class Variables {
 
         //Aqui, não é uma variável, e sim uma constante, constantes no Java
         //recebem o "final" indicando que esse valor é o final e não poderá
-        //ser trocado.
-        final double pi = 3.14159;
-        double area = pi * raio * raio;
+        //ser trocado. Além disso, note que as letras estão em maiúsculo.
+        //Por convenção, as letras de uma constante, tem que ser maiúsculas.
+        final double PI = 3.14159;
+        double area = PI * raio * raio;
 
         //Note que o valor do primeiro resultado funciona conforme o 
         //planejado.
@@ -45,7 +46,7 @@ public class Variables {
 
         //Porém se fizermos agora a mesma conta da circunferência após a
         //troca do valor do raio, o valor da circunferência mudará.
-        area = pi * raio * raio;
+        area = PI * raio * raio;
         System.out.println("Terceiro resultado: " + area);
 
     }
