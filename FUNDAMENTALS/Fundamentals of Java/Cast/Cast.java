@@ -81,6 +81,12 @@ public class Cast {
         byte valueTemperaturaFarenheit = (byte) 129;
         System.out.println("Ex03:\n" + valueTemperaturaFarenheit + "\n");
 
+        //Ex04
+        String valueString = "20";
+        double stringToDouble = Double.parseDouble(valueString);
+        System.out.println("Ex04:\n" + (20 + stringToDouble) + "\n");
+
+
     }
 
     /*  Ex01 - Neste exemplo podemos ver primeiramente uma conversão implícita, quando a variável "valueDouble" aceita um
@@ -100,5 +106,10 @@ public class Cast {
                 um número maior do que ele pode suportar, ele foi direto para os próximos falores de tabela do byte, indo
                 direto para os números negativos. Imagine como isso pode ser problemáticos para uma aplicação e não for 
                 usado com cautela.
+     */
+    /*  Ex04 - Abaixo temos uma conversão explícita de uma string para um valor double, note que para fazer a conversão
+                e atribuição do valor, nós usamos o método "parseDouble()" do wrapper "Double". Note mais abaixo que o 
+                o valor realmente ser tornou um double, por quando pedimos para somá-lo a um numeral no println, ele fez 
+                isso sem problemas.
      */
 }

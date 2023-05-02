@@ -1,6 +1,7 @@
 //JOptionPane:
 
-/*  O JOptionPane é um pacote de ferramentas da lib "javax.swing".
+/*  O JOptionPane é um pacote de ferramentas da lib "javax.swing", uma biblioteca já vem por 
+    padrão dentro do JDK.
     O que ele faz exatamente é gerar uma interface gráfica por através de Janelas geradas pelo SO 
     do computador, essas janelas podem ser usadas para mostrar mensagens de alerta, bem como para 
     colher dados de usuário.
