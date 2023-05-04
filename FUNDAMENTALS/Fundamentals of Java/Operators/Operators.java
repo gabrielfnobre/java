@@ -59,6 +59,9 @@
                         || : OU lógico. Retorna verdadeiro se pelo menos um dos operandos 
                             for verdadeiro.
                         ! : Negação lógica. Inverte o valor booleano do operando.
+                        ^ : OU Exclusivo. Retorna verdadeiro somente OU exclusivos ("true 
+                            e false" ou "false e true", valores como "true e true" ou
+                            "false e false" retornam negativo).
 
         # Relacionais: Operadores que fazem comparações entre um dado e outro dado.
                         entre os relacionais temos:
@@ -123,6 +126,7 @@ public class Operators {
         System.out.println("AND true && true : " + (true && true));
         System.out.println("OR false || true : " + (false || true));
         System.out.println("Negacao !true : " + !true);
+        System.out.println("XOR true ^ false : " + (true ^ false));
         System.out.println("Precedencia: 7 + 5 - 5 / 2 = " + (7 + 5 - 5 / 2));
         System.out.println("Primeiro ele faz: 5 / 2 = 2.5");
         System.out.println("Depois vem para a esquerda e faz: 7 + 5 = 12");
