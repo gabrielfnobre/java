@@ -35,9 +35,15 @@
                         Eles podem ser prefix (prefixados) quando o operador vêm antes do
                         operando (significa que o operando será operado antes do programa
                         prosseguir com a execução) ou podem ser postfix (pós-fixado) 
-                        quando o operando é operado somente depois. Há também o tipo 
-                        infix (entre os fixados), mas ele se aplica somente a operações
-                        binárias. Entre os operadores de atribuição temos:
+                        quando o operando é operado somente depois da execução em 
+                        andamento. Há também o tipo infix (entre os fixados), mas ele se 
+                        aplica somente a operações binárias. 
+
+                        OBSERVAÇÃO SOBRE INCREMENTO E DECREMENTO: Eles vão modificar o 
+                        valor de memória da variável. Lembre-se que essa mudança é 
+                        feita na memória, então pode alterar todo o resultado!
+                        
+                        Entre os operadores de atribuição temos:
 
                         += : atribuição de adição. Equivale a x = x + y, onde x é a 
                             variável à esquerda e y é a expressão à direita.
@@ -49,6 +55,12 @@
                             variável à esquerda e y é a expressão à direita.
                         %= : atribuição de módulo. Equivale a x = x % y, onde x é a 
                             variável à esquerda e y é a expressão à direita.
+                        ++ : autoincremento. Ele pode ser tanto prefixado quanto 
+                            posfixado. Sempre vai incrementar "1" ao valor já 
+                            existente.
+                        -- : autodecremento. Ele pode ser tanto prefixado quanto 
+                            posfixado. Sempre vai decrementar "1" ao valor já 
+                            existente.
 
 
         # Lógicos: Operadores que fazem operações booleanas entre os dados, operações 
@@ -62,6 +74,27 @@
                         ^ : OU Exclusivo. Retorna verdadeiro somente OU exclusivos ("true 
                             e false" ou "false e true", valores como "true e true" ou
                             "false e false" retornam negativo).
+
+        # Ternário: Operadores que operam sobre 3 dados. Esse operador é o mais incomum
+                        pois ele tem que seguir a seguinte sintaxe:
+
+                        (expressão lógica) ? (resultado se true) : (resultado se false)
+
+                        Explicando expressão:
+                            # Primeiro, temos que colocar aqui uma expressão lógica que 
+                                desejamos obter o resultado. Por ser uma expressão lógica
+                                ela só poderá devolver "true" ou "false";
+                            # Segundo, temos o sinal de "?" que faz a separação entre a
+                                expressão que está sendo comparada e os dois valores 
+                                que serão devolvidos;
+                            # Terceiro, temos o primeiro resultado que será retornado 
+                                caso a expressão resulte num "true";
+                            # Quarto, temos o sinal de ":" que faz separação entre o 
+                                retorno do operador ternário caso ele dê "true" ao 
+                                lado esquerdo e o retorno caso ele dê "false" do lado
+                                direito;
+                            # Quinto, temos o segundo resultado que será retornado caso a
+                                expressão resulte em "false";
 
         # Relacionais: Operadores que fazem comparações entre um dado e outro dado.
                         entre os relacionais temos:
@@ -117,6 +150,10 @@ public class Operators {
         System.out.println("Divisao a / b: " + (a / b));
         System.out.println("Multiplicacao a * b: " + (a * b));
         System.out.println("Modulo a % b: " + (a % b));
+        System.out.println("Autoincremento prefixado ++a: " + ++a);
+        System.out.println("Autodecremento posfixado b--: " + b--);
+        System.out.println("Resultado depois do posfixado b: " + b);
+        System.out.println("ATENCAO!!! Depois do prefixado e do posfixado os valores das variaveis mudou para:\n\ta = 2\n\tb = 1");
         System.out.println("atribuicao aditiva a+= a: " + (a+= a));
         System.out.println("atribuicao negativa a-= a: " + (a-= a));
         System.out.println("atribuicao multiplicativa a*= a: " + (a*= a));
@@ -131,5 +168,7 @@ public class Operators {
         System.out.println("Primeiro ele faz: 5 / 2 = 2.5");
         System.out.println("Depois vem para a esquerda e faz: 7 + 5 = 12");
         System.out.println("Por fim faz 12 - 2.5, cortando o valor decimal = 10");
+        System.out.println("Ternário \"true ? sou verdadeiro : sou falso\" : " + (true ? "sou verdadeiro" : "sou falso"));
+        System.out.println("Ternário \"false ? sou verdadeiro : sou falso\" : " + (false ? "sou verdadeiro" : "sou falso"));
     }
 }
