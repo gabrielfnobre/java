@@ -1,3 +1,4 @@
+package LOOPS.IfElseAndElseIf;
 //IF, ELSE AND ELSE IF IN JAVA
 
 //In Java we can also use conditionals "if", "else" and "else if". And as in others languages, when the 
