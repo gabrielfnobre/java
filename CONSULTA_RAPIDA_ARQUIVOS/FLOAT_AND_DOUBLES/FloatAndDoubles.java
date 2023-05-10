@@ -1,3 +1,4 @@
+package FLOAT_AND_DOUBLES;
 //FLOAT AND DOUBLES
 
 //When Java uses floating point numbers, it uses 2 types of values: float and double.

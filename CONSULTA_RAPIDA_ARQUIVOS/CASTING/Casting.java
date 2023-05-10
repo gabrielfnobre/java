@@ -1,3 +1,4 @@
+package CASTING;
 //CASTING
 
 //The Casting is a way to convert a primitive type into other primitve type, for example, we can cast a 

@@ -1,3 +1,4 @@
+package CHARS;
 //CHAR IN JAVA
 
 //In Java, we have the primitive type "char", which is used when we want a variable with one charactere and 

@@ -1,3 +1,4 @@
+package VARIABLES;
 //VARIABLES IN JAVA
 
 //In Java we can use variables without fear that a referece to the memory space of the assigned variable 

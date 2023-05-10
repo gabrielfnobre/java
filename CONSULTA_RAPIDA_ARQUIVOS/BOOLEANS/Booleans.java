@@ -1,3 +1,4 @@
+package BOOLEANS;
 //BOOLEANS
 
 //Booleans are a primitive type that use only "true" and "false" values, or they can takes boolean expressions
