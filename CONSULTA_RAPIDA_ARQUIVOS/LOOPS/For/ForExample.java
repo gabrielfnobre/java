@@ -54,6 +54,21 @@
                     podemos criar um incremento a variável contadora dentro do 
                     laço "for", muito embora isso seja muito estranho e não usual;
 
+                # O laço "for" também é uma excelente escolha quando temos que 
+                    fazer repetições aninhadas, ou seja, precisamos repetir um 
+                    processo uma determinada quantidade de vezes e além disso 
+                    precisamos que a cada repetição um processo que está dentro 
+                    do processo seja repetido uma determinada quantidade de 
+                    vezes. Isso é o que chamamos de "for aninhado" ou "for
+                    encadeado". A estrutura de um laço encadeado geralmente é
+                    assim:
+
+                        for(int i = 0; i <= 10; i++){
+                            for(int j = 0; j <= 10; j++){
+                                bloco de execução;
+                            }
+                        }
+
     Vejamos alguns exemplos...
 
 
@@ -79,10 +94,22 @@ public class ForExample {
         }
         System.out.println();
 
+
         //Ex03
         // for(;;){
         //     System.out.print("infinite ");
         // }
+
+
+        //Ex04
+        System.out.println("Ex04");
+        for(int numeral = 1; numeral <= 10; numeral++){
+            for(int multiplicando = 0; multiplicando <= 10; multiplicando++){
+                int resultado = numeral * multiplicando;
+                System.out.printf("%d X %d = %d\n", numeral, multiplicando, resultado);
+            }
+            System.out.println();
+        }
 
     }
 
@@ -101,6 +128,13 @@ public class ForExample {
     /* Ex03 - Esse exemplo é só para mostrar o que acontece se tivermos um for sem nada dentro dos seus campos. O que vai
                 acontecer nesse caso é que o for será repetido infinitamente, pois por padrão o campo condicional do for
                 recebe o valor "true", fazendo com que ele repita sem parar;
+     */
+
+    /* Ex04 - Nesse exemplo temos um uso clássico de laço aninhado - que também pode ser chamado de laço encadeado - que
+                é quando precisamos que um laço percorra uma certa quantidades de linhas, referentes a 1 valor, e que 
+                cada vez que ele percorra essas linhas ele também faça um determinado número de execuções. Como uma 
+                tabuada de 1 a 10, vamos precisar executar 10 vezes cada numeral da tabuada, para isso o laço for 
+                encadeado (ou aninhado) é uma excelente escolha;
      */
 
 
