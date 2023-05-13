@@ -25,6 +25,15 @@
             # Os cases recebem os valores que serão comparados à variável. Se o valor
                 for identico ao valor que está no case, o laço vai entrar na 
                 execução do case.
+                Podemos fazer um mesmo bloco de execução para 2 cases diferentes, 
+                para isso basta usarmos um case atrás do outro assim:
+                    case valor1: case valor2
+                        Bloco de execução;
+                Ou assim...
+                    case valor1:
+                    case valor2:
+                        Bloco de execução;
+                Dos 2 jeitos vai dar certo.
                 AQUI VALE UMA OBSERVAÇÃO! Caso um valor entre no case e não possua um
                 break dentro da sentença, todos os outros cases também serão 
                 executados!
@@ -33,9 +42,8 @@
                 de entrar em um case e não executemos nenhum outro;
 
             # O default é usado como um valor padrão caso nenhum case seja satisfeito,
-                ele sempre deve ser usado por último, se usarmos o default em primeiro
-                ou antes de outros cases, eles serão executados, por que o default 
-                abre o espaço para executar tudo!
+                ele não precisa necessariamente ser usado por último, mas por 
+                convenção nós temos o costume de colocá-lo no último lugar.
 
     Vejamos um exemplo...
  */
@@ -45,12 +53,14 @@ import javax.swing.JOptionPane;
 public class Switch {
     public static void main(String[] args){
 
-        String animal = JOptionPane.showInputDialog(null, "O animal e o que? (terrestre, aquatico ou anfibio)");
+        //Ex01
+        String animal = JOptionPane.showInputDialog(
+            null, "O animal e o que?\n\t\t- terrestre\n\t\t- rastejante\n\t\t- aquatico\n\t\t- anfibio");
 
         switch(animal.toLowerCase()){
             case "anfibio":
                 JOptionPane.showMessageDialog(null, "O animal sabe andar e nadar");
-            case "terrestre":
+            case "terrestre": case "rastejante":
                 JOptionPane.showMessageDialog(null, "O animal sabe andar");
                 break;
             case "aquatico":
@@ -62,4 +72,19 @@ public class Switch {
 
         System.exit(0);
     }
+
+        /* Ex01 - Nesse exemplo capturamos um dos valores do usuário sobre um animal e devolvemos ao 
+            usuário a resposta sobre o que o animal sabe fazer de acordo com o tipo de animal que ele
+            é. No que algumas particularidades sobre esse switch:
+
+                # Se o usuário escolher anfibio: Tanto o bloco do anfíbio será executado quanto o 
+                    bloco do terrestre, por que o anfibio não tem um break;
+
+                # Se o usuário escolher terrestre ou ratejante: O mesmo bloco de execução será 
+                    executado, por que estamos usando os cases em conjunto, e o bloco do aquatico 
+                    não será executado por causa do break;
+
+                # No default temos o valor de exibição padrão, note que o default não precisa de 
+                    break, pois ele já é a última execução;
+         */
 }
