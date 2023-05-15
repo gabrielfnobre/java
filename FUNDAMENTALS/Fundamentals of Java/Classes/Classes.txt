@@ -61,3 +61,35 @@ No Java, quando falamos de classes, existem alguns conceitos que temos que adota
 
         Esses relacionamentos podem ser representados dentro do Java e podem ser 
         controlados também, para que não saiam do controle.
+
+
+    # UMA CLASSE PODE DEFINIR UM TIPO (ESTRUTURA DE DADOS):
+
+        Nós podemos usar uma classe para definir um tipo de dado, ou uma estrutura de 
+        dados específica da nossa aplicação. Assim como o Java já possuí tipos de dados 
+        embutidos na linguagem que podem usar seus próprios métodos e formas de ser 
+        operados. Podemos usar uma classe para criar o nosso próprio tipo de dado, com
+        métodos e maneiras próprias de operar sobre esses dados.
+
+
+    # UMA CLASSE REPRESENTA UMA ABSTRAÇÃO:
+
+        O que seria uma abstração? A palavra abstração no paradigma de uma classe vem
+        exatamente do verbo "abstrair" (tirar), ou seja, tirar: dados e comportamentos 
+        de algo que existe na vida real para que seja recriado no mundo digital.
+
+        Ou seja, você está abstraíndo todas as informações a respeito de um objeto do
+        mundo real e recriando esse objeto no mundo digital.
+
+        Um copo de ter uma abstração, uma loja pode ser uma abstração, um método de 
+        trabalho pode ser uma abstração.
+
+    
+    # OS DADOS GERADOS NUMA CLASSE SÃO OBJETOS DAQUELA CLASSE:
+
+        Como os dados gerados em uma classe sempre referenciam ao molde daquela Classe, 
+        podemos dizer que todos os dados gerados à partir de uma classe são "objetos" ou 
+        "instâncias" daquela classe.
+
+        Pois todos os objetos vaão ter as mesmas referências de atributos e métodos, 
+        portanto, todas pertencem ao mesmo molde, ou seja, a mesma Classe.
