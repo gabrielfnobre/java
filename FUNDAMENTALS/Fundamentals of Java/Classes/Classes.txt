@@ -93,3 +93,34 @@ No Java, quando falamos de classes, existem alguns conceitos que temos que adota
 
         Pois todos os objetos vaão ter as mesmas referências de atributos e métodos, 
         portanto, todas pertencem ao mesmo molde, ou seja, a mesma Classe.
+
+
+    # MÉTODOS DE UMA CLASSE:
+
+        Todas classes possuem membros dentro dela que podem representar de forma genérica
+        atributos e comportamentos de daquela classe. Podemos enumerar basicamente 4 
+        tipos de membros para uma classe, nem sempre uma classe irá ter todos os 4 
+        membros, mas classes maiores em programas maiores geralmente fazem uso dos 6 
+        tipos de membros que vamos falar:
+
+            # atributos (variáveis e constantes):
+                Os atributos são os dados de uma classe, eles podem variar entre 
+                atributos variáveis: que são atributos que podem mudar o seu 
+                valor dependendo da operação que for feita no decorrer da 
+                execução do código. E atributos constantes, atributos que não
+                mudam, não importa a execução que for feita no código;
+
+            # Método Construtor:
+                Um método (ou métodos) usados especificamente para construir 
+                novos objetos para àquela classe. Podemos ter apenas 1 único
+                método construtor, ou podemos ter vários, isso vai depender de 
+                classe para classe;
+
+            # Métodos:
+                Comportamentos próprios daquela classe. Podemos ter vários 
+                tipos de métodos dentro de uma classe.
+
+            # Classes:
+                Uma classe também pode ter outras classes dentro dela. Ou 
+                classes que ela referencia, mesmo que não estejam própriamente
+                dentro dela.
