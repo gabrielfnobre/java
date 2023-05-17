@@ -1,4 +1,5 @@
 //  EXEMPLO SIMPLES DA CRIAÇÃO DE UM OBJETO POR ATRAVÉS DE UMA CLASSE:
+//  A continuação desse exercício está em Methods/ExampleMethodInstancer.java
 
 /*  Aqui abaixo temos o exemplo clássico de 2 objetos criados a partir de uma classe,
     note alguns detalhes importantes:
