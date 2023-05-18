@@ -15,6 +15,7 @@ public class ConstructorsInstancer {
         System.out.println(p1.name);
         System.out.println(p1.showProduct());
         
+        //EX03
         Constructories p2 = new Constructories("Caneta", 1.50, 0.20);
         System.out.println("\nEx03:");
         System.out.println(p2.showProduct());
