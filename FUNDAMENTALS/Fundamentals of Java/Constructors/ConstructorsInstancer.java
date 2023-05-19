@@ -21,4 +21,17 @@ public class ConstructorsInstancer {
         System.out.println(p2.showProduct());
 
     }
+
+    /*  Ex01 - Note aqui a forma que usamos para instanciar uma variável com o construtor padrão. Note que, como ele não
+                possuí nenhum método que atribua valores as variáveis, ele retorna um produto sem atributos definidos;
+     */
+
+    /*  Ex02 - Aqui nós atribuímos valores ao produto gerado no Ex01, note que a atribuição funciona sem problemas, 
+                mostrando que a instancialização realmente deu certo;
+     */
+
+    /*  Ex03 - Já aqui nós inicializamos a variável com o construtor parametrizado, como ele já faz referencia direta 
+                aos atributos da classe, fica fácil retornar os valores do objeto.
+     */
+
 }
