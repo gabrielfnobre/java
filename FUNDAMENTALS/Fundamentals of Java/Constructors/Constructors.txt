@@ -100,6 +100,11 @@ diferentes de construtores: "Construtor Padrão" e "Construtor Parametrizado"...
         Note no exemplo acima que criamos 2 métodos construtores parametrizados com assinaturas
         diferentes e além disso temos um construtor padrão explícito, isso é totalmente aceitável.
 
+        OBSERVAÇÃO: Quando criamos um construtor parametrizado e não possuímos um Construtor Padrão
+                    criado de forma explícita, nós automaticamente perdemos o Construtor Padrão.
+                    Para poder usar o Construtor Padrão novamente, temos que criar um Construtor 
+                    Padrão de forma explícita dentro da classe.
+
 OBSERVAÇÃO: Caso criemos um método da seguinte forma:
 
     String MesmoNomeDaClasse(String a){
