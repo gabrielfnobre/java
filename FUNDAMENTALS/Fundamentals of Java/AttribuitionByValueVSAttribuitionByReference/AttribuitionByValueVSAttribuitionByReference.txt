@@ -64,22 +64,15 @@ será mudado? A resposta é não! Veja a imagem abaixo....
 
 A primeira coisa que devemos ter em mente quando falamos de atribuição por referência é que a atribuição por 
 referência SEMPRE VAI ACONTECER DE UM TIPO OBJETO PARA UM TIPO OBJETO, ela é feita quando temos uma variável 
-que contém um objeto ou wrapper (String, Double, Integer e etc) e atribuímos a variável em si como valor 
-para outra variável, dessa forma:
-
-    String nome1 = "David";
-    String nome2 = nome1;
-
-        ou
+que contém um objeto e atribuímos a variável em si como valor para outra variável, dessa forma:
 
     People nome1 = new People("David");
     People nome2 = nome1;
 
-    Perceba no exemplo acima que temos uma atribuição por referência primeiro de um tipo wrapper
-    "String" e no segundo exemplo temos a atribuição de um objeto instanciado a partir da 
-    variável "nome1" para a variável "nome2". Em ambos exemplos, o que é passado para a segunda
-    variável é apenas o endereço de memória que referencia para ao espaço onde os valores estão 
-    alocados, como podemos ver na imagem abaixo:
+    Perceba no exemplo acima que temos uma atribuição por referência de um objeto instanciado a partir da 
+    variável "nome1" para a variável "nome2". Nesse exemplo, o que é passado para a segunda variável é apenas 
+    o endereço de memória que referencia para ao espaço onde os valores estão alocados, como podemos ver na 
+    imagem abaixo:
 
      _________
     |         |                         
