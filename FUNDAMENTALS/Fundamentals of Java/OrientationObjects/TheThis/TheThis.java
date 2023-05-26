@@ -8,7 +8,8 @@
     ou de classe.
 
     E o "this" é uma palavra reservada que nós usamos sempre para referenciar aos membros da 
-    instância. Geralmente o usamos dentro dos métodos para referenciar aos membros da instância.
+    instância. Geralmente o usamos dentro dos métodos para referenciar aos membros da instância, ou
+    para que um construtor chame outro construtor.
     
     A sintaxe é simples:
 
