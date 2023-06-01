@@ -60,8 +60,88 @@
             # Estrutura Homogênea: todos os arrays em java só podem aloca 1 único tipo de dado
                         não podem alocar tipos de dados diferentes;
 
+    Veja alguns exemplos abaixo para ver outras formas de declarar arrays e certas nuâncias do 
+    tipo array...
+
  */
 
+import java.util.Arrays; 
+
 public class ArrayAbout {
-    
+    public static void main(String[] args){
+        //Ex01
+        double[] notasAlunoA = new double[3];
+        double [] notasAlunoB = {5.6, 6.9, 8.7};
+        double notasAlunoC[] = new double[3];
+
+        //Ex02
+        System.out.println("Ex02:");
+        System.out.println(notasAlunoA);
+        System.out.println(Arrays.toString(notasAlunoA) + "\n");
+        
+        //Ex03
+        notasAlunoA[0] = 6.3;
+        notasAlunoA[1] = 8.3;
+        notasAlunoA[2] = 9.5;
+        System.out.println("Ex03:");
+        System.out.println(Arrays.toString(notasAlunoA) + "\n");
+        
+        //Ex04
+        System.out.println("Ex04:");
+        for(int i = 0; i < notasAlunoB.length; i++){
+            System.out.println("A " + (i + 1) + "ª nota foi: " + notasAlunoB[i]);
+        }
+        System.out.println();
+        
+        //Ex05
+        double[] notasSalvas = {4.5, 6.7, 7.5};
+        System.out.println("Ex05:");
+        for(int i = 0; i < notasAlunoC.length; i++){
+            notasAlunoC[i] = notasSalvas[i];
+        }
+        System.out.println(Arrays.toString(notasAlunoC));
+    }
+
+    /*  Ex01 - Aqui vemos 3 formas diferentes em que podemos declarar um array:
+                1ª forma: Essa é a forma mais comum, usando os colchetes logo após a declaração do 
+                        tipo de dado que o array vai ter, e na sequência usamos a palavra 
+                        reservada new para instânciar um novo array sem inicía-lo de fato. Essa é
+                        a forma mais comum pois geralmente, pegamos valores à partir de um banco
+                        de dados para poder alimentar um array, por isso geralmente só o iniciamos
+                        e somente depois atribuímos valores pegos do banco de dados para ele;
+
+                2ª forma: Note que usamos os colchetes entre o tipo primitivo e o nome da variável,
+                        essa é uma forma bem incomum, mas também pode ser usada. E na sequência 
+                        já inicializamos o array, tornando um array com o tamanho fixo de 3 e com
+                        os 3 valores já inclusos. Essa é a forma mais incomum. Note que para 
+                        inicializar um array em java usamos chaves "{}" invés de "[]" para fazer 
+                        a atribuição dos valores;
+
+                3ª forma: Aqui estamos apenas mostrando que também é possível iniciar um array 
+                        colocando os colchetes só após a declaração do tipo primitivo e da 
+                        variável;
+
+        Ex 02 - Note nesse exemplo que não é possível à principio imprimir um array completo só 
+                usando "println", isso acontece por que o println procura acessar o método toString
+                do objeto do tipo primitivo, no caso do array, oque ele armazena no método toString
+                é uma referência do tipo de primitivo, no nosso caso é o "[D" por ser um double e
+                na sequência temos um número hexadecimal que leva para o endereço de memória do 
+                array.
+                Note que para imprimir o valor do array foi necessário importar a classe "Arrays" 
+                do java.util para usar o método "toString" para poder enxergar os valores totais do
+                array. Outra coisa interessante, note que sempre que uma variável é iniciada por 
+                padrão ela irá auto-atribuir os valores padrão do tipo primitivo. Nesse caso, como 
+                estamos usando double o valor padrão é 0.0;
+
+        Ex 03 - Nesse exemplo veja como fizemos para atribuir valores ao array que foi declarado, 
+                para acessar os valores nós simplesmente usamos a notação de colchetes (também 
+                chamada de notação índice) para acessar os índices e fazer atribuição á eles;
+
+        Ex 04 - Aqui estamos usando um laço "for" para mostrar que geralmente usamos laços para 
+                iterar entre os valores de um array fazendo operações nestes valores;
+
+        Ex 05 - Aqui temos um outro exemplo para mostrar como geralmente fazemos, que é pegando 
+                valores pré-existentes de algum lugar e atribuímos sobre um array usando um 
+                laço "for";
+     */
 }
