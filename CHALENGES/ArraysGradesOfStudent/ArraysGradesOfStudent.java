@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 public class ArraysGradesOfStudent {
