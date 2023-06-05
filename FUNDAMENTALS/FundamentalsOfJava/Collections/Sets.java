@@ -61,6 +61,7 @@ import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
 public class Sets {
+    @SuppressWarnings({"rawtypes", "unchecked"}) //Usado para suprimir erros...
     public static void main(String[] args){
         
         //Ex01
@@ -83,7 +84,7 @@ public class Sets {
         System.out.println(exampleLinkedHashSet);
         System.out.println();
         
-        //Ex02
+        //Ex03
         System.out.println("Ex03:");
         TreeSet exampleTreeSet = new TreeSet();
         exampleTreeSet.add("a");
@@ -92,6 +93,33 @@ public class Sets {
         exampleTreeSet.add("d");
         exampleTreeSet.add("c");
         System.out.println(exampleTreeSet);
+        System.out.println();
+        
+        //Ex04
+        System.out.println("Ex04:");
+        exampleTreeSet.remove("e");
+        System.out.println(exampleTreeSet);
+        System.out.println();
+        
+
+        //Ex05
+        System.out.println("Ex05:");
+        TreeSet toJoin = new TreeSet(Arrays.asList("f", "g", "h", "a"));
+        exampleTreeSet.addAll(toJoin);
+        System.out.println(exampleTreeSet);
+        System.out.println();
+        
+        //Ex06
+        System.out.println("Ex06:");
+        exampleTreeSet.retainAll(toJoin);
+        System.out.println(exampleTreeSet);
+        System.out.println();
+        
+        //Ex07
+        System.out.println("Ex07:");
+        exampleTreeSet.clear();
+        System.out.println(exampleTreeSet);
+
 
     }
 
@@ -112,6 +140,22 @@ public class Sets {
     
      /*  Ex 03 - Já o TreeSet, o que importa para dele é se a ordem está ascendente, note que atribuímos as letras fora
                 de ordem no set, mas o TreeSet fez o papel dele, colocando todas as letras em ordem ascendente.
+     */
+     
+     /*  Ex 04 - Aqui estamos mostrando um método muito utilizado no set que é o "remove()", note que ele remove um 
+                valor que passarmos como parâmetro para o método. Esse método por padrão retorna "true" se o valor 
+                realmente existir dentro do set e false se o valor não existir;
+     */
+     
+     /*  Ex 05 - Aqui estamos vendo o método "addAll()" em ação, esse método funciona como uma união, ele pega 2 sets
+                e junta todos os valores que tiverem nos dois - sem duplicar valores é claro;
+     */
+     
+     /*  Ex 06 - Aqui vemos o método "retainAll()" esse método pela tudo que tiver num set que também tiver no outro
+                set e mantém no set que está sendo usado para chamar esse método. Isso é o que chamamos de intersecção;
+     */
+     
+     /*  Ex 07 - Aqui temos o método "clear()", esse método limpa todo o set, deixando ele zerado;
      */
     
 }
