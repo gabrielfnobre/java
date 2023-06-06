@@ -52,6 +52,31 @@
             implementação é mais lenta para inserção e remoção, mas permite obter os elementos em uma ordem 
             específica.
 
+    Embora o set seja uma estrutura heterogênea, a boa prática de programação pede que sempre usemos o mesmo tipo 
+    de dado, mesmo dentro de um set, por isso foi desenvolvido o Generics, usando o Generics conseguimos fazer com
+    que até mesmo um set só aceite valores que sejam do mesmo tipo.
+
+    Veja como usamos o Generics:
+
+        Set<String> nomeDaVariavel = new HashSet<>();
+
+        Explicando:
+                    - Veja que chamamos pela classe "Set" em seguida, dentro das tags nós colocamos tipo de dado 
+                        que nós queremos que o nosso set tenha. Essas tags são o generics, elas querem dizer ao 
+                        java que esse set só vai aceitar valores Strings, se tentássemos colocar valores Double ou
+                        Integer teríamos um erro de compilação;
+
+                        OBSERVAÇÕES: Por estar se tratando de uma collection o generics só aceitará valores do 
+                        tipo objeto como wrappers, objects e arrays. Aqui usamos um Set para declarar a variável
+                        mas poderíamos ter usado um HashSet, um TreeSet ou outro.
+
+                    - Note também que quando instanciamos a variável usamos também um generics no método 
+                        construtor, note que esse generics em especial está vazio, isso acontece por que o nosso 
+                        generics no método construtor não precisa necessáriamente estar com o nome do tipo de dado 
+                        que vamos colocar, o java entende que se usarmos um generics vazio o método construtor vai 
+                        imitar o mesmo tipo de dado da classe declarante. Esse generics vazio é o que chamamos de 
+                        "diamond notation", por causa da sua aparência;
+
         Veja abaixo exemplos de como declaramos esses métodos...
  */
 
@@ -59,6 +84,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
+import java.util.Set;
 
 public class Sets {
     @SuppressWarnings({"rawtypes", "unchecked"}) //Usado para suprimir erros...
@@ -119,7 +145,37 @@ public class Sets {
         System.out.println("Ex07:");
         exampleTreeSet.clear();
         System.out.println(exampleTreeSet);
+        System.out.println();
+        
+        //Ex08
+        System.out.println("Ex08:");
+        Set<String> names = new HashSet<>();
+        names.add("Gabriel");
+        names.add("Graziela");
+        names.add("Dario");
+        System.out.println(names);
+        System.out.println();
+        
+        //Ex09
+        System.out.println("Ex09:");
+        for(String name: names){
+            System.out.println(name + " Nobre");
+        }
+        System.out.println();
+        
+        //Ex10
+        System.out.println("Ex10:");
+        TreeSet<Integer> carrosDeCorrida = new TreeSet<Integer>();
+        carrosDeCorrida.add(5);
+        carrosDeCorrida.add(3);
+        carrosDeCorrida.add(1);
+        carrosDeCorrida.add(2);
+        carrosDeCorrida.add(4);
 
+        for(int carro: carrosDeCorrida){
+            System.out.println("O número " + carro + " chegou!!!");
+        }
+        System.out.println();
 
     }
 
@@ -156,6 +212,25 @@ public class Sets {
      */
      
      /*  Ex 07 - Aqui temos o método "clear()", esse método limpa todo o set, deixando ele zerado;
+     */
+     
+     /*  Ex 08 - Nesse exemplo já temos o que o java considera um "set seguro", que seria um set que utiliza por 
+                obrigação o mesmo tipo de dado (set homogêneo). Que é um set usando generics para demilimtar que apenas
+                valores do tipo String entrem no set. Note também que estamos usando "diamond notation" para instanciar
+                o set;
+     */
+     
+     /*  Ex 09 - Aqui temos a demonstração de uma grande vantagem de se usar sets com generics, usar laços for neles, 
+                como eles possuem o mesmo tipo de dados dá pra usar laços for sem problemas;
+     */
+     
+     /*  Ex 10 - Aqui estamos exemplificando que dá para declarar sets com generics mesmo que a classe declarante não
+                seja a classe "Set", estamos usando um "TreeSet", mas qualquer classe do conjunto set poderia ser 
+                usada. Note também que estamos usando um generics com a declaração de tipo de dado explícita no
+                método construtor. Veja também outra coisa interessante no laço for, note que não estamos usando um
+                wrapper no for para iterar sobre os valores do set, em vez disso, estamos usando um "int" para iterar
+                sobre "Integer", o código funciona sem dar erro. Isso acontece por que o java automaticamente 
+                consegue converter os valores de Interger para int, isso se chama "Auto Box";
      */
     
 }
