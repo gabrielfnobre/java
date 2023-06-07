@@ -72,6 +72,7 @@
  */
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Lists {
     public static void main(String[] args){
@@ -79,7 +80,44 @@ public class Lists {
         //EX01
         System.out.println("Ex01:");
         ArrayList newList = new ArrayList();
-        newList.add
+        newList.add("nome");
+        newList.add(2);
+        newList.add(true);
+        newList.add(4.5);
+
+        System.out.println(newList);
+        System.out.println();
+        
+        //EX02
+        System.out.println("Ex02:");
+        for(int i = 0; i < newList.size(); i++){
+            System.out.println(newList.get(i));
+        }
+        System.out.println();
+        
+        //EX03
+        System.out.println("Ex03:");
+        List<String> nomes = new ArrayList<>();
+        nomes.add("Gabriel");
+        nomes.add("Graziela");
+        nomes.add("Dario");
+
+        for(String name: nomes){
+            System.out.println(name + " Nobre");
+        }
+        System.out.println();
+        
+        //EX04
+        System.out.println("Ex04:");
+        System.out.println(newList.size());
+        System.out.println();
+        
+        //EX05
+        System.out.println("Ex05:");
+        newList.remove(0);
+        System.out.println(newList);
+        System.out.println();
+
 
     }
     
