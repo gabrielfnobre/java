@@ -41,7 +41,9 @@
         # LinkedList: Esse método gera uma lista duplamente encadeada, onde cada valor guarda quem é o seu valor 
             antecessor e o valor posterior. Isso facilita a procura por um determinado elemento dentro da lista, 
             fazendo com que a busca seja muito eficiente. Porém, se a busca for feita por através de indexação, 
-            ela fica mais lenta. Esse método também armazena mais memória que os demais;
+            ela fica mais lenta. Esse método também armazena mais memória que os demais. Esse método é 
+            preferível quando temos um programa que constantemente têm que fazer alterações e buscas na lista, 
+            por que ele é mais rápido para encontrar os elementos;
 
     Embora a list seja uma estrutura heterogênea, a boa prática de programação pede que sempre usemos o mesmo tipo 
     de dado, por isso foi desenvolvido o Generics, usando o Generics conseguimos fazer com que até mesmo uma list 
@@ -73,6 +75,7 @@
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Lists {
@@ -140,9 +143,69 @@ public class Lists {
             }
         }
         System.out.println();
+        
+        //EX07
+        System.out.println("Ex07:");
 
+        LinkedList<String> fruits = new LinkedList<>(Arrays.asList("banana", "apple", "orange"));
+        System.out.println(fruits);
+        
+        fruits.add(1, "mango");
+        System.out.println(fruits);
+        System.out.println();
+        
+
+        //EX08
+        System.out.println("Ex08:");
+
+        String fruitShifted = fruits.get(1);
+        fruits.set(1, fruits.get(0));
+        fruits.set(0, fruitShifted);
+        System.out.println(fruits);
+        System.out.println();
+        
+
+        //EX09
+        System.out.println("Ex09:");
+        getIndex(fruits, "mango", "apple");
+        getIndex(fruits, "orange", "banana");
+        getIndex(fruits, "pineapple", "banana");
+        getIndex(fruits, "banana", "strawberry");
+        System.out.println(fruits);
+        System.out.println();
 
     }
+
+    @SuppressWarnings({"rawtypes"})
+    private static <T> LinkedList getIndex(LinkedList<T> listLinked, T shifter, T shifted){
+        int value1 = 0;
+        int value2 = 0;
+        boolean firstValidation = false;
+        boolean secondValidation = false;
+        for(int i = 0; i < listLinked.size(); i++){
+            if(listLinked.get(i).equals(shifter)){
+                value1 = i;
+                firstValidation = true;
+            } else if(listLinked.get(i).equals(shifted)){
+                value2 = i;
+                secondValidation = true;
+            }
+        }
+        
+        if(firstValidation && secondValidation){
+            listLinked.set(value1, shifted);
+            listLinked.set(value2, shifter);
+        } else {
+            if(!firstValidation){
+                System.out.println("A fruta \"" + shifter + "\" nao esta na lista!");
+            } else if (!secondValidation){
+                System.out.println("A fruta \"" + shifted + "\" nao esta na lista!");
+            }
+        }
+
+        return listLinked;
+    }
+
 
     /*  Ex01 - Nesse primeiro exemplo vimos como criar uma list usando o método "ArrayList" e classe
                 ArrayList, note também que é possível criar uma lista heterogênea, muito embora essa 
@@ -185,6 +248,49 @@ public class Lists {
                 3º - Também gostaríamos de mostrar mais um método das lists, que é o método 
                     "contains()", esse método consegue checkar se um determinado valor existe 
                     dentro de uma list, retornando "true" ou "false";
+     */
+    
+     /*  Ex07 - Neste exemplo, temos o exemplo de uma LinkedList criada, lembre-se que a missão das
+                LinkedList é gerar uma lista onde é facil encontrar itens pelo seu id assim como 
+                também encontrar os valores adjacentes.
+                Note que  inicializamos uma lista com 3 valores de frutas, e facilmente inserimos 
+                mais uma fruta na segunda posição, isso foi possível graças ao método "add()" do 
+                LinkedList, que é capaz de encontrar um determinado index fazer a inserção nele e
+                fazer com que os valores adjacentes ocupem as posições seguintes na lista, sem 
+                perder nenhum valor;
+     */
+    
+     /*  Ex08 - Neste exemplo, mostramos como usar os métodos "get()" e "set()" do LinkedList, 
+                note que com esses métodos é possível retornar o valor de uma lista por através do
+                método "get()", guardando esse valor numa variável.
+                E usando o método "set()" é possível selecionar um índice para que ele receba um
+                valor, como no caso a nossa LinkedList é do tipo String, ela só receberá valores
+                desse tipo, note que usamos "get()" e "set()" para trocar valores de lugar;
+     */
+     
+     /*  Ex09 - Neste exemplo, temos uma versão mais sofisticada do exemplo 08. Aqui criamos um 
+                método chamado "getIndex" que recebe como parâmetros a lista e o nomes dos valores
+                que queremos trocar de posição na lista e em resposta devolve a lista com os 
+                valores trocados, e caso o usuário digite um valor que não existe na lista o 
+                método irá retornar no console o nome do valor que não existe na lista.
+
+                Explicando o método getIndex:
+
+                    - Generics com notação <T>: 
+                        É um generics com tipo Genérico que aceitará qualquer tipo de valor;
+                    
+                    - Laço For:
+                        Nosso método recebe a lista que será iterada com o laço for, no laço for 
+                        verificamos se os valores existem dentro da lista, toda vez que um valor
+                        existir, o número id dele será armazenado na variavel "value1" ou "value2"
+                        e as valiáveis de validação serão setadas como "true";
+                    
+                    - Validação:
+                        Se ambas as variveis de validação forem setadas como "true" é sinal de 
+                        que os dois valores passados como string existem dentro da lista e a 
+                        troca será feita usando os "set()".
+                        Mas se 1 dos valores da validação der "false" o valor que deu false é 
+                        encontrado e é retornado para o usuário qual valor que deu false. 
      */
     
 }
