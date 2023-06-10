@@ -72,13 +72,16 @@
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Lists {
+    @SuppressWarnings({"rawtypes", "unchecked"}) //Usado para suprimir erros de tipos randômicos...
     public static void main(String[] args){
         
         //EX01
         System.out.println("Ex01:");
+
         ArrayList newList = new ArrayList();
         newList.add("nome");
         newList.add(2);
@@ -87,16 +90,20 @@ public class Lists {
 
         System.out.println(newList);
         System.out.println();
-        
+         
+
         //EX02
         System.out.println("Ex02:");
+
         for(int i = 0; i < newList.size(); i++){
             System.out.println(newList.get(i));
         }
         System.out.println();
         
+
         //EX03
         System.out.println("Ex03:");
+
         List<String> nomes = new ArrayList<>();
         nomes.add("Gabriel");
         nomes.add("Graziela");
@@ -107,18 +114,77 @@ public class Lists {
         }
         System.out.println();
         
+
         //EX04
         System.out.println("Ex04:");
+
         System.out.println(newList.size());
         System.out.println();
         
+
         //EX05
         System.out.println("Ex05:");
+        
         newList.remove(0);
         System.out.println(newList);
+        System.out.println();
+        
+
+        //EX06
+        System.out.println("Ex06:");
+
+        ArrayList<String> nomesOutros = new ArrayList<>(Arrays.asList("Gabriel", "Dario"));
+        for(String nome: nomesOutros){
+            if(nomes.contains(nome)){
+                System.out.println("Nas duas listas contem o nome " + nome);
+            }
+        }
         System.out.println();
 
 
     }
+
+    /*  Ex01 - Nesse primeiro exemplo vimos como criar uma list usando o método "ArrayList" e classe
+                ArrayList, note também que é possível criar uma lista heterogênea, muito embora essa 
+                não seja uma boa prática de programação.
+     */
+
+    /*  Ex02 - Nesse exemplo vemos uma vantagem que as list possuem em cima das sets, enquanto não 
+                podemos executar um laço for sobre uma set heterogênea, na list executar um laço for
+                sobre uma lista heterogênea é totalmente possível, pois as list são indexadas. Basta 
+                usarmos o método "get()" para encontrar os valores por através de indexação.
+     */
+
+    /*  Ex03 - Aqui temos o exemplo de como criar uma list da maneira correta, usando "generics" para
+                gerar valores homogêneos. Note que neste exemplo estamos usando a classe "List" para
+                gerar a list, mas poderíamos usar as outras classes variantes como o ArrayList e o 
+                LinkedList. Em seguida estamos usamos as notações de tags generics para gerar o tipo
+                dos nossos valores como String e a "diamond notation" no método ArrayList para copiar
+                o generics da classe declarante.
+
+                Mais abaixo, veja uma das vantagens de usar lists homogêneas que é usar o for each, 
+                visto que as listas possuem o mesmo tipo de dado;
+     */
+
+    /*  Ex04 - Neste exemplo, veja que é possível retornar o tamanho completo de uma lista usando o 
+                método "size()";
+     */
+
+    /*  Ex05 - Neste exemplo, veja que é possível remover qualquer elemento de uma list por através 
+                do "id" do índex, para isso usamos o método "remove()";
+     */
+
+    /*  Ex06 - Neste exemplo, gostaríamos de mostrar 3 coisas:
+                1º - Que é possível criar uma lista homogênea iniciando a declaração com qualquer 
+                    classe do tipo list, como o "ArrayList";
+
+                2º - Que é possível iniciar uma variável list com os seus valores usando a classe
+                    Arrays e o método "asList", onde poderemos atribuir diretamente os valores a 
+                    variável;
+
+                3º - Também gostaríamos de mostrar mais um método das lists, que é o método 
+                    "contains()", esse método consegue checkar se um determinado valor existe 
+                    dentro de uma list, retornando "true" ou "false";
+     */
     
 }
