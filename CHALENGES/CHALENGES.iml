@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/ArraysGradesOfStudent" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassMembersVSInstanceMembers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/InputEmployeSalary" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/attribuitionByReferenceVcAttribuitionByValue" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/averageOfClass" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/calculator" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/catchDayWeek" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crazyFormula" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/forDescending" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/moduloClasses" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/trauma" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tvBooleans" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/whilePedePraSair" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

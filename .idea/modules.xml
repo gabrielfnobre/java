@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CHALENGES/CHALENGES.iml" filepath="$PROJECT_DIR$/CHALENGES/CHALENGES.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CHALENGESAGAIN/CHALENGESAGAIN.iml" filepath="$PROJECT_DIR$/CHALENGESAGAIN/CHALENGESAGAIN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CONSULTA_RAPIDA_ARQUIVOS/CONSULTA_RAPIDA_ARQUIVOS.iml" filepath="$PROJECT_DIR$/CONSULTA_RAPIDA_ARQUIVOS/CONSULTA_RAPIDA_ARQUIVOS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FUNDAMENTALS/FundamentalsOfJava/OrientationObjects/Classes/Classes.iml" filepath="$PROJECT_DIR$/FUNDAMENTALS/FundamentalsOfJava/OrientationObjects/Classes/Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Documents.iml" filepath="$PROJECT_DIR$/Documents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FUNDAMENTALS/FundamentalsOfJava/FundamentalsOfJava.iml" filepath="$PROJECT_DIR$/FUNDAMENTALS/FundamentalsOfJava/FundamentalsOfJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CONSULTA_RAPIDA_ARQUIVOS/LOOPS/LOOPS.iml" filepath="$PROJECT_DIR$/CONSULTA_RAPIDA_ARQUIVOS/LOOPS/LOOPS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FUNDAMENTALS/FundamentalsOfJava/OrientationObjects/Methods/Methods.iml" filepath="$PROJECT_DIR$/FUNDAMENTALS/FundamentalsOfJava/OrientationObjects/Methods/Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CHALENGES/OrientationObject/OrientationObject.iml" filepath="$PROJECT_DIR$/CHALENGES/OrientationObject/OrientationObject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FUNDAMENTALS/FundamentalsOfJava/OrientationObjects/OrientationObjects.iml" filepath="$PROJECT_DIR$/FUNDAMENTALS/FundamentalsOfJava/OrientationObjects/OrientationObjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROJECTS/PROJECTS.iml" filepath="$PROJECT_DIR$/PROJECTS/PROJECTS.iml" />
+    </modules>
+  </component>
+</project>

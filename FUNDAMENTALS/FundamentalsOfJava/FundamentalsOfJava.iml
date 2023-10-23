@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/ArrayAbout" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Blocks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cast" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Collections" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Constants" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DotNotation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/EqualsThe" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Import" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Inference" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaDoc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/NullType" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Operators" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PaternVariables" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PrimitiveTypes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Sentences" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Wrappers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/equalityBetweenStrings" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
